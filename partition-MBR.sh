@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Create MBR partition table
 parted /dev/sda -- mklabel msdos
 # Add root partition

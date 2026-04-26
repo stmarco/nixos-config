@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Create gpt table
 parted /dev/sda -- mklabel gpt
 # Add root partition
