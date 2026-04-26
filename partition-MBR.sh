@@ -18,15 +18,10 @@ swapon /dev/sda2
 mount /dev/sda1 /mnt
 # Generate configuration file
 nixos-generate-config --root /mnt
+cp ./configuration.nix /mnt/etc/nixos/
 cp ./environment.nix /mnt/etc/nixos/
-cp ./services.nix /mnt/etc/nixos/
+cp ./settings.nix /mnt/etc/nixos/
 cp ./users.nix /mnt/etc/nixos/
-echo "==================================================="
-echo "Next: vim /mnt/etc/nixos/configuration.nix"
-echo "Select boot grub device"
-echo "check demo configuration.nix to "
-echo "add environment.nix, services.nix"
-echo "and users.nix to configuration.nix"
 echo "==================================================="
 echo "Final steps:"
 echo "nixos-install"
