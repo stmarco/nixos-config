@@ -15,6 +15,6 @@ mkswap -L swap /dev/sda2
 # turn swap on
 swapon /dev/sda2
 # mount the nixos partition on /mnt
-mount /dev/disk/by-label/nixos /mnt
+mount /dev/sda1 /mnt
 # Generate configuration file
 nixos-generate-config --root /mnt
