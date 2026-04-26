@@ -1,3 +1,5 @@
+{ pkgs }:
+{ 
 users.users.marco = {
    isNormalUser = true;
    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
@@ -7,4 +9,4 @@ users.users.marco = {
    shell = pkgs.bash;
    home = "/home/marco";
  };
- 
+ }

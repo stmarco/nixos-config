@@ -23,6 +23,7 @@ cp ./services.nix /mnt/etc/nixos/
 cp ./users.nix /mnt/etc/nixos/
 echo "==================================================="
 echo "Next: vim /mnt/etc/nixos/configuration.nix"
+echo "Select boot grub device"
 echo "Add environment.nix to configuration.nix imports"
 echo "Add services.nix to configuration.nix imports"
 echo "Add users.nix to configuration.nix imports"
