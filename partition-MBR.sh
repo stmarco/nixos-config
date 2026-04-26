@@ -12,9 +12,9 @@ parted /dev/sda -- mkpart primary linux-swap -8GB 100%
 # Assign a unique symbolic label to the file system
 mkfs.ext4 -L nixos /dev/sda1
 mkswap -L swap /dev/sda2
-
-mount /dev/disk/by-label/nixos /mnt
 # turn swap on
 swapon /dev/sda2
+# mount the nixos partition on /mnt
+mount /dev/disk/by-label/nixos /mnt
 # Generate configuration file
 nixos-generate-config --root /mnt
