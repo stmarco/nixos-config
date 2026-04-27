@@ -8,7 +8,7 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
     };
-    outputs = { nixpkgs, home-manager, ... }: {
+    outputs = { self, nixpkgs, home-manager, ... }: {
         nixosConfigurations.nixos-hyprland = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             modules = [
@@ -21,7 +21,7 @@
                         users.marco = import ./home.nix;
                         backupFileExtension = "backup";
                     };
-                };
+                }
             ];
         };
     };
