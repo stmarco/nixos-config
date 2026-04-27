@@ -27,3 +27,5 @@ echo "Final steps:"
 echo "nixos-install"
 echo "reboot"
 echo "==================================================="
+nixos-install
+reboot
