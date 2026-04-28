@@ -12,12 +12,13 @@ lsblk
  mkfs.fat -F 32 -n BOOT /dev/sda1
 
  mount /dev/sda2 /mnt
+ mkdir -p /mnt/boot
 
- mount --mkdir /dev/sda1 /mnt/boot
+ mount -o umask=077 /dev/sda1 /mnt/boot
 
  lsblk # to see mounted partitions 
 
-nixos-generate-config
+nixos-generate-config --root /mnt
 
 cd ~
 
